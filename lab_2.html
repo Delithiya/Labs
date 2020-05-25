@@ -1,0 +1,142 @@
+<html>
+<head> <link rel="stylesheet" type="text/css" href="css.css">
+    <meta charset=utf-8>
+</head>
+<body bgcolor="#FFFFF0"> 
+  <p class=z>Задание 1: <b>Рассчитать для окружности радиуса r боковую поверхность прямого кругового конуса высотой h;
+длину дуги, опирающейся на центральный угол.</b></p>
+    
+            Введите высоту h (образующая): <input type="text" id="h" required><p>
+            Введите радиус r: <input type="text" id="r" required ><p>
+            Введите угол φ: <input type="text" id="f" required><p> 
+            <button id="but">Рассчитать</button>   
+    
+    
+     <p class=z>Результат:</p>
+    
+    <div id="test"> </div>
+    <div id="test1"> </div>
+    
+
+    <script>
+    
+        var tt = test;
+        var ttt = test1;
+        
+    function make() {
+        
+        var h = document.getElementById("h").value;
+        var r = document.getElementById("r").value;
+        var f = document.getElementById("f").value;
+        
+        if (h==0|| r==0||f==0) {alert ("Пожалуйста, заполните все поля");}
+        
+        else {
+        
+        
+        var result1 = (Math.PI)*r*( +r + +h);
+            
+        var result2 = (((Math.PI * r) / 180 ) * f);
+        
+        result1 = result1.toFixed(1);
+        result2 = result2.toFixed(1);
+        
+    tt.textContent = "Площаль боковой поверхности S  =  " + result1 + " см^2";
+    ttt.textContent = "Длина дуги  =  " + result2 + " см";} };
+    document.getElementById("but").addEventListener('click', make);  
+        
+    </script>
+    
+ <p class=z>Примечание: </p>
+    
+    <p class=t1>Точка, которая является началом этих лучей, называется <b>вершиной</b> конуса.
+<br>
+<b>Образующая</b> — отрезок, соединяющий точку, лежащую на окружности круга, который является основанием, и вершину конуса.
+<br>
+<b>Высота</b> — расстояние от плоскости основания до точки вершины конуса.
+<br>
+<b>Прямым</b>, если его основанием является эллипс или круг. Причем вершина должна точно проектироваться в центр основания.
+ <b>Радиальная мера угла</b> – это отношение длины дуги к радиусу окружности. Из формулы длины дуги окружности получаем <br>
+</p>
+ <p align="center"><img src="image/2.png" alt="Формула"></p>
+    
+    
+ <p class=z>Пример 1: </p>   
+ <p class=t1>Вычисление площади поверхности конуса</p>
+ <b>Дано:</b><br>
+<p class=t1>r = 3<br>
+    l=3</p>
+ <p class=z>Решение:</p>
+<p class=t1>S = π r⋅(r+l)<br>
+S = 3.14 * 3 * (3+3) = 56.549<br>
+    <b>Ответ:</b><br>
+S = 56.549S = 56.549  </p> 
+    
+    <p class=z>Пример 2: </p>   
+ <p class=t1>Вычислите длину дуги окружности с радиусом 3, если ее градусная мера составляет 150<br>
+ <b>Дано:</b><br></p>
+<p class=t1>Формула длины дуги центрального угла n° выражается формулой<br></p> <p align="left"><img src="image/22.png" alt="Формула"></p>
+ <p class=z>Решение:</p>
+    <p><b>Подставив значения из условия задачи, получаем </b><br></p>  <p align="left"><img src="image/23.png" alt="Формула"></p>    
+    
+    
+    
+    <p class=z>Задание 2: <b>Рассчитать все биссектрисы треугольника, зная три сторон.</b></p>
+    
+    
+            Введите  a: <input type="text" id="a" required><p>
+            Введите  b: <input type="text" id="b" required ><p>
+            Введите  c: <input type="text" id="c" required><p> 
+            <button id="but1">Рассчитать</button>   
+    
+    
+     <p class=z>Результат:</p>
+    
+    <div id="test3"> </div>
+    <div id="test4"> </div>
+    <div id="test5"> </div>
+
+    <script>
+    
+        var m = test3;
+        var l = test4;
+        var k = test5;
+        
+    function make1() {
+        
+        var a = document.getElementById("a").value;
+        var b = document.getElementById("b").value;
+        var c = document.getElementById("c").value;
+        
+        if (a==0|| b==0||c==0) {alert ("Пожалуйста, заполните все поля");}
+        
+        else {
+        
+        
+        var result3 = Math.sqrt( a * b * (+a + +b + +c) * (+a + +b - +c)) / (+a + +b);    
+               
+        var result4 = Math.sqrt( a * c * (+a + +b + +c) * (+a + +c - +b)) / (+a + +c);    
+            
+        var result5 = Math.sqrt( b * c * (+a + +b + +c) * (+b+ +c - +a)) / (+b + +c);    
+            
+        
+        result3 = result3.toFixed(1);
+        result4 = result4.toFixed(1);
+        result5 = result5.toFixed(1);
+        
+    m.textContent = "Первая биссектриса: " + result3 + " см";
+    l.textContent = "Вторая биссектриса: " + result4 + " см";
+    k.textContent = "Третья биссектриса: " + result5 + " см"  ;} };
+    document.getElementById("but1").addEventListener('click', make1);  
+        
+    </script>
+    
+    <p class=z>Примечание: </p>
+    
+    <p class=t1>Основная формула нахождения биссектрисы в любом произвольном треугольнике, зная все три стороны, базируется на <b>теореме Стюарта</b> , и заключается в извлечении квадратного корня из произведения прилегающих сторон на сумму всех трех сторон и сумму прилегающих сторон за вычетом третьей, а также последующим делением корня этого выражения на сумму прилегающий к биссектрисе сторон.
+<br>
+
+ <p align="center"><img src="image/24.png" alt="Формула"></p>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<html>
+<head>  <link rel="stylesheet" type="text/css" href="css.css">
+    <meta charset=utf-8>
+   
+</head>
+<body bgcolor="#FFFFF0">
+    <p class=z>Задание 1: <b>Создайте XML-документ согласно варианту. Документ должен содержать не менее трех записей.</b></p>
+    <p class=z>Задание 2: <b>Выполните DTD-описание созданного XML-документа, которое должно включать: описание элементов; описание атрибутов элементов; определение типа элементов. </b></p>
+    <p class=z> <b>«Кулинарная книга»: тип блюда, название блюда, мера весов, ингредиент 1, количество ингредиента 1, рецепт, количество калорий.</b></p>
+
+    <p><a href="xml.xml" download>XML-документ</a></p>
+
+    <fieldset> <legend><b>DTD-описание</b></legend>
+        <p> 
+            &lt-- DTD --&gt
+            <p>  &lt!DOCTYPE  recipes
+  [
+  &lt!-- объявляем элементы, описание типов элементов -->
+    <p>  &lt!ELEMENT recipes (food+)> 
+        <p>  &lt!ELEMENT food (type, name, weight, ingredient1, amount1, ingredient2, amount2, ingredient3, amount3, description, calories)> 
+            <p> &lt!ELEMENT type (#PCDATA)>
+                <p>   &lt!ELEMENT name (#PCDATA)>
+                    <p> &lt!ELEMENT weight (#PCDATA)>
+                        <p>&lt!ELEMENT ingredient1 (#PCDATA)>
+                            <p>  &lt!ELEMENT amount1 (#PCDATA)>
+                                <p> &lt!ELEMENT ingredient2 (#PCDATA)>
+                                    <p> &lt!ELEMENT amount2 (#PCDATA)>
+                                        <p>&lt!ELEMENT ingredient3 (#PCDATA)>
+                                            <p>&lt!ELEMENT amount3 (#PCDATA)>
+                                                <p> &lt!ELEMENT description (#PCDATA)>
+                                                    <p>&lt!ELEMENT calories (#PCDATA)>
+
+                                                        <p> &lt!-- объявляем параметрическую сущность, которую используем в этом DTD -->
+                                                            <p> &lt!ENTITY % par "NMTOKEN #REQUIRED">
+                                                                <p>&lt!-- объявляем атрибуты -->
+                                                                    <p>&lt!ATTLIST food  type  CDATA  #REQUIRED>
+                                                                        <p>&lt!ATTLIST food  ingredient3  CDATA  #IMPLIED>
+                                                                            <p> &lt!ATTLIST food  amount3  CDATA  #IMPLIED>
+                                                                                <p> &lt!ATTLIST food  name  CDATA  #REQUIRED>
+                                                                                    <p>&lt!ATTLIST food  weight  CDATA  #REQUIRED>
+                                                                                        <p>&lt!ATTLIST food  ingredient1  CDATA  #REQUIRED>
+                                                                                            <p>&lt!ATTLIST food  amount1  CDATA  #REQUIRED>
+                                                                                                <p> &lt!ATTLIST food  ingredient2  CDATA  #REQUIRED>
+                                                                                                    <p> &lt!ATTLIST food  amount2  CDATA  #REQUIRED>
+                                                                                                        <p>&lt!ATTLIST food  description  CDATA  #REQUIRED>
+                                                                                                            <p> &lt!ATTLIST food  calories  CDATA  #REQUIRED>
+  ]&gt
+        </p>
+        </fieldset>    
+
+
+</body>
+</html>

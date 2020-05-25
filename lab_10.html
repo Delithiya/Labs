@@ -1,0 +1,39 @@
+<html xsl:version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml">
+<head>  <link rel="stylesheet" type="text/css" href="css.css">
+    <meta charset=utf-8>
+   
+</head>
+<body bgcolor="#FFFFF0">
+    <p class=z>Задание 1: <b>Разработайте XSD-схему XML-документа, созданного в лабораторной работе 9, которая должна включать: описание элементов, описание атрибутов элементов, определение типа элементов, определение последовательности использования элементов.</b></p>
+    <p class=z>Задание 2: <b>Выведите на HTML-страницу содержимое XML-документа, созданного в лабораторной работе 9, используя XSL. Выполните сортировку записей по одному из возможных критериев и фильтрацию данных по одному из возможных показателей. </b></p>
+
+    <fieldset> <legend><b>XSD-схема</b></legend>
+        <p> &ltxs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <p> &ltxs:element name="recipes">
+                <p> &ltxs:complexType>
+                    <p> &ltxs:sequence>
+                        <p> &ltxs:element name="food" maxOccurs="unbounded" minOccurs="0">
+                            <p> &ltxs:complexType>
+                                <p> &ltxs:sequence>
+                                    <p> &ltxs:element type="xs:string" name="type"/>
+                                        <p> &ltxs:element type="xs:string" name="name"/>
+                                            <p> &ltxs:element type="xs:string" name="weight"/>
+                                                <p> &ltxs:element type="xs:string" name="ingredient1"/>
+                                                    <p> &ltxs:element type="xs:byte" name="amount1"/>
+                                                        <p> &ltxs:element type="xs:string" name="ingredient2"/>
+                                                            <p> &ltxs:element type="xs:short" name="amount2"/>
+                                                                <p> &ltxs:element type="xs:string" name="ingredient3"/>
+                    <p> &ltxs:element type="xs:string" name="description"/>
+                        <p> &ltxs:element type="xs:string" name="calories"/>
+                            <p> &lt/xs:sequence>
+                                <p> &lt/xs:complexType>
+                                    <p> &lt/xs:element>
+                                        <p> &lt/xs:sequence>
+                                            <p> &lt/xs:complexType>
+                                                <p> &lt/xs:element>
+                                                    <p> &lt/xs:schema>
+        </fieldset>    
+
+
+</body>
+</html>

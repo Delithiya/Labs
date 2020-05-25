@@ -1,0 +1,103 @@
+<html>
+<head>  <link rel="stylesheet" type="text/css" href="css.css">
+    <meta charset=utf-8>
+
+</head>
+
+<body bgcolor="#FFFFF0">
+    <p class=z>Задание1: <b>По нажатию на кнопку один фрагмент текста заменять другим.</b></p>
+
+            
+            <p class=z>Задание 2: <b>Текст синего цвета двигается в центр страницы, увеличивается, затем перемещается вниз и уменьшается.</b></p>
+
+
+                <p class=z>Задание 3: <b>Добавить на страницу форму, содержащую несколько элементов формы, при этом при выборе определенного значения в одном элементе:
+                 делать недоступным другой элемент (для нечетных вариантов).</b></p>
+
+
+   
+    <div class="first_div" id="first_div">Первое сообщение</div>
+    <div class='second_div' id ="first_div" $.hide();>Второе сообщение</div>
+    <button class="btn1">Спрятать 1</button>
+    <button class="btn2">Спрятать 2</button>
+   <br><br>
+
+   <div class="father">
+    <div class="linear">Синий текст</div>
+</div>
+
+<br><br>
+
+
+
+
+<fieldset class="father1"> <legend><b>Какую пиццу вы хотите?</b></legend>
+    <label><input type="radio" class="pizza">Маргаритта</label><br>
+    <label><input type="radio" class="pizza"> Четыре сыра</label><br>
+    <label ><input type="checkbox" name="svoya" value="svoya" id="my"> Создать свою</label>
+    </fieldset>
+    
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> 
+    </script>
+<script>
+
+$(function () {
+$('#my').click(function(){
+if($('#my').prop('checked')) {
+    $('.pizza').prop('checked', false);};
+});
+
+
+$('.pizza').click(function() {
+    if($('.input:checkbox:checked')){
+        $('#my').prop('checked', false);
+    };
+});  });
+
+    $(function () {
+                         $(".second_div").hide();
+                              $(".btn1").click(function () {
+                                 $(".first_div").hide();
+                                 $(".second_div").show()
+                             });
+                          $(".btn2").click(function () {
+                                 $(".second_div").hide();
+                               $(".first_div").show()
+                        });
+                       }); 
+    
+
+
+
+
+$(document).ready(function(){
+    $(function start(){
+      $('.linear').animate({
+        marginTop: '190px' 
+      }, 1000)
+      .animate({fontSize: "+=5"}, "slow")
+        .animate({
+        'marginTop': '0' 
+      }, 1000, start);
+
+      $('.linear').animate({
+        marginTop: '370px' 
+      }, 1000)
+      .animate({fontSize: "-=5"}, "slow")
+        .animate({
+        'marginTop': '190' 
+      }, 1000, start)
+
+
+    }); 
+      
+    });
+
+
+    </script> 
+
+
+</body>
+</html>

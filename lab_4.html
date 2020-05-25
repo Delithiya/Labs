@@ -1,0 +1,89 @@
+<html>
+<head> <link rel="stylesheet" type="text/css" href="css.css">
+    <meta charset=utf-8>
+  
+</head>
+<body bgcolor="#FFFFF0">
+  <p class=z>Задание: <b>1. Горизонтальное двухуровневое меню, раскрывающееся при щелчке левой кнопкой мыши. Второй уровень меню скрывается, когда указатель мыши покидает область выбранного пункта или появившегося меню. <br>2. Организуйте последовательный просмотр изображений (не меньше четырех), используя кнопки Предыдущее изображение и Следующее изображение.</b></p>
+
+    
+    <div class="tabs">
+  <div class="content"> <br>
+    <li class="elements"><a href="lab_1.html" class=t><b>Лабораторная работа №1</b></a></li>
+    <li class="elements"><a href="lab_2.html" class=t><b>Лабораторная работа №2</b></a></li>
+    <li class="elements"><a href="lab_3.html" class=t><b>Лабораторная работа №3</b></a></li> 
+    <br>
+  </div>
+        <div class="elements1">1 часть</div>
+        
+</div>
+<div class="tabs" >
+ <div class="content" > <br>
+    <li class="elements"><a href="lab_4.html" class=t><b>Лабораторная работа №4</b></a></li>
+    <li class="elements"><a href="lab_5.html" class=t><b>Лабораторная работа №5</b></a></li>
+    <li class="elements"><a href="lab_6.html" class=t><b>Лабораторная работа №6</b></a></li>
+  </div>
+  <div class="elements1"> 2 часть </div>
+    
+ 
+</div>
+
+<div class="tabs">
+ <div class="content"> <br>
+    <li class="elements"><a href="lab_7.html" class=t><b>Лабораторная работа №7</b></a></li>
+    <li class="elements"><a href="lab_8.html" class=t><b>Лабораторная работа №8</b></a></li>
+    <li class="elements"><a href="lab_9.html" class=t><b>Лабораторная работа №9</b></a></li>
+     <li class="elements"><a href="lab_10.html" class=t><b>Лабораторная работа №10</b></a></li>
+  </div>
+  <div class="elements1"> 3 часть </div>
+ 
+</div>
+    
+  <br><br><br><br><br><br><br><br><br>
+			
+<div class="wrapper">
+    <div class="wrap-slider">
+        <div class="slider">
+            <div class="slider-content">
+                <img class="slide" src="image/k1.jpg" alt=""/>
+                <img class="slide" src="image/k2.jpg" alt=""/>
+                <img class="slide" src="image/k3.jpg" alt=""/>
+                <img class="slide" src="image/k4.jpg" alt=""/>
+            </div>
+        </div>
+        <div class="slider-nav">
+            <div id="slide-left" class="slider-arrow slider-left">&#8592;</div>
+            <div id="slide-right" class="slider-arrow slider-right">&#8594;</div>
+        </div>
+    </div>
+</div>
+    
+    
+    <script>var slide_left = document.getElementById('slide-left'),
+    slide_right = document.getElementById('slide-right'),
+    total_img = document.getElementsByTagName('img'),
+    idx = 0;
+
+slide_right.addEventListener('click', moveLeft);
+function moveLeft(){
+    slide_left.style.display = 'block';
+    total_img[idx].style.display = 'none';
+    total_img[++idx].style.display = 'block';
+    if (idx === total_img.length - 1) {
+      slide_right.style.display = 'none';
+    }
+}
+
+slide_left.addEventListener('click', moveRight);
+function moveRight(){
+    slide_right.style.display = 'block';
+    total_img[idx].style.display = 'none';
+    total_img[--idx].style.display = 'block';
+    if (idx === 0) {
+      slide_left.style.display = 'none';
+    }
+} </script>
+    
+    
+</body>
+</html>

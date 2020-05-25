@@ -1,0 +1,52 @@
+<html>
+<head>  <link rel="stylesheet" type="text/css" href="css.css">
+    <meta charset=utf-8>
+   
+</head>
+<body bgcolor="#FFFFF0">
+
+    <p class=z>Задание: <b>Красная окружность, R=50пикс: Отображается в правом нижнем углу окна браузера, изменяет прозрачность до 0,35 изменяет радиус на 30, 
+        пикселей, движется в левый верхний угол окна браузера, изменяет цвет на зеленый, складывается и отображается.</b></p>
+        <br><br><br><br>
+    <button id="start">Start</button>
+    <button id="reset">Reset</button>
+    
+    
+    <div id="square" class="box"></div>
+    
+    
+    
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="ColorsJQ.js"></script>
+    
+      <script>
+    
+    $('#start').click(function(){
+  $('#square').animate({opacity: '0.35'}).animate({height: '60px', width: '60px'})
+  .animate({left: '5%', top: '5%'}).animate({backgroundColor: 'green'}).slideToggle("slow")
+  .slideToggle("slow").animate({opacity: '1'});
+  });
+  
+  $('#reset').click(function(){
+  $('#square').css({backgroundColor: 'red', top: '80%', left: '92%', height: '100px', width: '100px', opacity: '1'});
+  });
+  
+    </script>
+  
+    <style>
+  
+      .box{
+        background-color: red;
+        position: absolute;
+        top: 80%;
+        left: 92%;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+  
+      }
+  
+
+    </style>
+</body>
+</html>

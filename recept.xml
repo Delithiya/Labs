@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="recept.xsl"?>
+
+<recipes>
+
+<food>
+<type>Напитки</type>
+<name>Коктейль из авокадо</name>
+<weight>375 г.</weight>
+<ingredient1>Авокадо</ingredient1>
+<amount1>100</amount1>
+<ingredient2>Молоко 3,2%</ingredient2>
+<amount2>250</amount2>
+<ingredient3>Мёд</ingredient3>
+<amount3>25</amount3>
+<description>Из авокадо вынуть косточку. Очистить от кожицы. Все ингредиенты закинуть в блендер и хорошо взбить.</description>
+<calories>437</calories>
+</food>
+
+<food>
+<type>Выпечка</type>
+<name>Бисквит Буше</name>
+<weight>205 г.</weight>
+<ingredient1>Сахар</ingredient1>
+<amount1>50</amount1>
+<ingredient2>Мука пшеничная</ingredient2>
+<amount2>45</amount2>
+<ingredient3>Яйцо</ingredient3>
+<amount3>110</amount3>
+<description>Отделить желтки от белков, взбить белки с сахаром. Просеять муку, аккуратно ввести в массу вместе с жетками. Выпекатьв заранее разогретой духовке 15 минут при температуре 180 градусов</description>
+<calories>516</calories>
+</food>
+
+<food>
+<type>Соусы</type>
+<name>Соус карри</name>
+<weight>55 г.</weight>
+<ingredient1>Карри</ingredient1>
+<amount1>10</amount1>
+<ingredient2>Йогурт 1,5%</ingredient2>
+<amount2>200</amount2>
+<ingredient3>Сок лимонный</ingredient3>
+<amount3>10</amount3>
+<description>Смешать все ингредиенты.</description>
+<calories>38</calories>
+</food>
+
+
+</recipes>
